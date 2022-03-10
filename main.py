@@ -39,6 +39,7 @@ def shorter():
                 else:
                     lid = str(len(database)+1)
                     database[lid] = url
+                    update_database()
                     short_link = f"{base_url}/{lid}"
                     out = {"error":False, "short_url":short_link}
             except:
